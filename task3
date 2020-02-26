@@ -1,0 +1,101 @@
+---
+title: "Task 3 - Lasso estimation in multiple linear regression"
+author: "Group 3"
+date: "26/02/2020"
+output: 
+  pdf_document:
+    keep_tex: TRUE
+    number_sections: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  fig.align = "center",
+  warning = FALSE,
+  collapse = TRUE,
+  results = "hide",
+  tidy = TRUE,
+  message = FALSE
+)
+```
+
+
+```{r}
+# libraries
+library(ggplot2)
+library(tidyverse)
+library(kableExtra)
+library(gridExtra)
+
+# function to format printed numbers
+formatgraph <- function(x) {
+  formatC(x, format = "e", digits = 3)
+}
+```
+
+# Lasso for the Boston Housing data
+
+## Exercise 1
+
+For the Boston House-price corrected dataset use Lasso estimation (in
+glmnet) to fit the regression model where the response is CMEDV (the corrected version of MEDV) and the explanatory variables are the remaining 13 variables in the previous list. Try to provide an interpretation to the estimated model.
+
+```{r}
+
+```
+
+## Exercise 2
+
+Use glmnet to fit the previous model using ridge regression. Compare the 10-fold cross validation results from function cv.glmnet with those you obtained in the previous practice with your own functions.
+
+
+```{r}
+
+```
+
+\pagebreak
+
+\pagebreak
+
+# A regression model with p >> n
+
+## Exercise 1
+
+Use glmnet and glmnet to obtain the Lasso estimation for regressing
+log.surv against expr. How many coeficient different from zero are in
+the Lasso estimator? Illustrate the result with two graphics.
+
+```{r}
+
+```
+
+## Exercise 2
+
+Compute the fitted values with the Lasso estimated model (you can use
+predict). Plot the observed values for the response variable against the Lasso fitted values.
+
+```{r}
+
+```
+
+## Exercise 3
+
+Consider the set $S_0$ of non-zero estimated Lasso coeficients. Use OLS to fit a regression model with response log.surv and explanatory variables the columns of expr with indexes in $S_0$. Plot the observed values for the response variable against the OLS fitted values.
+
+```{r}
+
+```
+
+## Exercise 4
+
+Compare the OLS and Lasso estimated coeficient. Compare the OLS and Lasso fitted values. Do a plot for that.
+
+```{r}
+
+```
+
